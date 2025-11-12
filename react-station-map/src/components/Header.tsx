@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Clock from './Clock';
 
 const Header = () => {
   return (
@@ -8,32 +9,35 @@ const Header = () => {
           <div className="flex items-center">
             <h1 className="text-2xl font-bold">BMKG Station Map</h1>
           </div>
-          <nav className="flex space-x-6">
-            <Link 
-              to="/" 
-              className="hover:text-blue-200 transition-colors duration-200"
-            >
-              Home
-            </Link>
-            <Link 
-              to="/stations" 
-              className="hover:text-blue-200 transition-colors duration-200"
-            >
-              Stations
-            </Link>
-            <Link 
-              to="/stations-simple" 
-              className="hover:text-blue-200 transition-colors duration-200"
-            >
-              Stations Simple
-            </Link>
-            <Link 
-              to="/about" 
-              className="hover:text-blue-200 transition-colors duration-200"
-            >
-              About
-            </Link>
-          </nav>
+          <div className="flex items-center space-x-8">
+            <nav className="flex space-x-6">
+              <Link
+                to="/"
+                className="hover:text-blue-200 transition-colors duration-200"
+              >
+                Home
+              </Link>
+              <Link
+                to="/stations"
+                className="hover:text-blue-200 transition-colors duration-200"
+              >
+                Stations
+              </Link>
+              <Link
+                to="/stations-simple"
+                className="hover:text-blue-200 transition-colors duration-200"
+              >
+                Stations Simple
+              </Link>
+              <Link
+                to="/about"
+                className="hover:text-blue-200 transition-colors duration-200"
+              >
+                About
+              </Link>
+            </nav>
+            <Clock />
+          </div>
         </div>
       </div>
     </header>
